@@ -1,15 +1,15 @@
 import { createContext, useContext, type ParentComponent } from "solid-js";
 import { createStore } from "solid-js/store";
-import { SampleView } from "src/view/SampleView";
+import MyPlugin from "src/main";
 
 // Set up the context type
 interface ISampleState {
-	plugin: SampleView | null;
+	plugin: MyPlugin | null;
 }
 
 // Set up the actions type
 interface ISampleActions {
-	setPlugin: (plugin: SampleView) => void;
+	setPlugin: (plugin: MyPlugin) => void;
 }
 
 // Initialize the default state and actions
@@ -39,7 +39,7 @@ export const SampleProvider: ParentComponent = (props) => {
 	// Initialize the actions
 	const actions = {
 		// Add actions to work with state here
-		setPlugin: (plugin: SampleView) => {
+		setPlugin: (plugin: MyPlugin) => {
 			setState("plugin", plugin);
 		},
 	};

@@ -1,9 +1,9 @@
 import { Component } from "solid-js";
 import { useSampleContext } from "src/context/SampleContext";
-import { SampleView } from "src/view/SampleView";
+import MyPlugin from "src/main";
 
 interface SampleComponentProps {
-	plugin: SampleView;
+	plugin: MyPlugin;
 }
 
 export const SampleComponent: Component<SampleComponentProps> = (props) => {

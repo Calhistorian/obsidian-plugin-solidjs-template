@@ -1,11 +1,18 @@
-import { ItemView } from "obsidian";
+import { ItemView, WorkspaceLeaf } from "obsidian";
 import { render } from "solid-js/web";
 import { SampleComponent } from "src/components/SampleComponent";
 import { SampleProvider } from "src/context/SampleContext";
+import MyPlugin from "src/main";
 
 export const SAMPLE_VIEW_TYPE = "sample-view";
 
 export class SampleView extends ItemView {
+	plugin: MyPlugin;
+
+	constructor(leaf: WorkspaceLeaf, plugin: MyPlugin) {
+		super(leaf);
+		this.plugin = plugin;
+	}
 	getViewType() {
 		return "sample-view";
 	}
@@ -21,7 +28,7 @@ export class SampleView extends ItemView {
 		render(
 			() => (
 				<SampleProvider>
-					<SampleComponent plugin={this} />
+					<SampleComponent plugin={this.plugin} />
 				</SampleProvider>
 			),
 			contentEl

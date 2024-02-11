@@ -96,7 +96,10 @@ export default class MyPlugin extends Plugin {
 		);
 
 		// Register sample view
-		this.registerView(SAMPLE_VIEW_TYPE, (leaf) => new SampleView(leaf));
+		this.registerView(
+			SAMPLE_VIEW_TYPE,
+			(leaf) => new SampleView(leaf, this)
+		);
 	}
 
 	// Open sample view in the right sidebar leaf
