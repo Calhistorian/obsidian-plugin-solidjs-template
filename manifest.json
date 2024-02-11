@@ -1,0 +1,11 @@
+{
+	"id": "obsidian-plugin-solidjs-template",
+	"name": "obsidian-plugin-solidjs-template",
+	"version": "0.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "Obsidian plugin template with SolidJS",
+	"author": "Obsidian",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}
